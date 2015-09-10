@@ -2,6 +2,8 @@
 <resources>
     <color name="transparent">#00000000</color>
     <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="textColor_deful">#82858b</color>
     <color name="nfd_wifipop_btn_text_normal">#ffffff</color>
     <color name="nfd_wifipop_btn_text_pressed">#dadada</color>
     <color name="nfd_wifipop_btn_bg_normal">#69aaed</color>

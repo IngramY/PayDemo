@@ -167,7 +167,7 @@
     <style name="bottom_bar_text">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">#82858b</item>
+        <item name="android:textColor">@color/textColor_deful</item>
     </style>
 
 </resources>

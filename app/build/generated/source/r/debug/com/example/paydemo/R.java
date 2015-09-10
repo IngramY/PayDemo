@@ -11,11 +11,14 @@ public final class R {
     public static final class attr {
     }
     public static final class color {
-        public static final int nfd_wifipop_btn_bg_normal=0x7f060000;
-        public static final int nfd_wifipop_btn_bg_pressed=0x7f060001;
-        public static final int nfd_wifipop_btn_text_normal=0x7f060002;
-        public static final int nfd_wifipop_btn_text_pressed=0x7f060003;
-        public static final int transparent=0x7f060004;
+        public static final int black=0x7f060000;
+        public static final int nfd_wifipop_btn_bg_normal=0x7f060001;
+        public static final int nfd_wifipop_btn_bg_pressed=0x7f060002;
+        public static final int nfd_wifipop_btn_text_normal=0x7f060003;
+        public static final int nfd_wifipop_btn_text_pressed=0x7f060004;
+        public static final int textColor_deful=0x7f060005;
+        public static final int transparent=0x7f060006;
+        public static final int white=0x7f060007;
     }
     public static final class dimen {
         public static final int activity_horizontal_margin=0x7f040000;

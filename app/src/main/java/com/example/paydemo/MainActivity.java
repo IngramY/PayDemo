@@ -22,6 +22,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     ImageButton image_gonext;
 
     private SingtonMenu bottomItem;
+    private int currentIndex = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,9 +37,12 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         title.setVisibility(View.VISIBLE);
 
         findView();
-        setTabselector(0);
+        setTabselector(currentIndex);
     }
 
+    /**
+     * @param index
+     */
     private void setTabselector(int index) {
         clearTabselector();
         bottomItem.images[index].setImageResource(bottomItem.image_selected[index]);
@@ -52,13 +56,12 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     private void clearTabselector(){
         for (int i = 0; i< bottomItem.num; i++){
             bottomItem.images[i].setImageResource(bottomItem.image_unselected[i]);
-            bottomItem.texts[i].setText(bottomItem.tabstr[i]);
+            bottomItem.texts[i].setTextColor(R.color.textColor_deful);
         }
     }
 
-
     /**
-     *
+     * 初始化 底部 视图
      */
     private void findView() {
         //底部初始化
@@ -68,25 +71,18 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
             bottomItem.images[i] = (ImageView) findViewById(bottomItem.image_id[i]);
             bottomItem.texts[i] = (TextView) findViewById(bottomItem.text_id[i]);
         }
-
     }
 
     @Override
     public void onClick(View view) {
         for (int i = 0; i < bottomItem.num; i++) {
             if (view.getId() == bottomItem.linear_id[i]) {
+
                 //点击的Linear背景设置为selector状态
-                bottomItem.images[i].setImageResource(bottomItem.image_selected[i]);
-                title.setText(bottomItem.tabstr[i]);
-//                setView(i);
-            } else {
-                bottomItem.images[i].setImageResource(bottomItem.image_unselected[i]);
+                setTabselector(i);
+                currentIndex = i;
             }
         }
-    }
-
-    private void setView(int i) {
 
     }
-
 }
