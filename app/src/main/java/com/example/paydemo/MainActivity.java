@@ -31,24 +31,44 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         ButterKnife.inject(this);
         bottomItem = SingtonMenu.getInstance();
 
+        image_goback.setVisibility(View.VISIBLE);
+        image_gonext.setVisibility(View.VISIBLE);
+        title.setVisibility(View.VISIBLE);
+
         findView();
+        setTabselector(0);
     }
 
+    private void setTabselector(int index) {
+        clearTabselector();
+        bottomItem.images[index].setImageResource(bottomItem.image_selected[index]);
+        bottomItem.texts[index].setTextColor(R.color.white);
+        title.setText(bottomItem.tabstr[index]);
+    }
+
+    /**
+     * 清除 选中 状态
+     */
+    private void clearTabselector(){
+        for (int i = 0; i< bottomItem.num; i++){
+            bottomItem.images[i].setImageResource(bottomItem.image_unselected[i]);
+            bottomItem.texts[i].setText(bottomItem.tabstr[i]);
+        }
+    }
+
+
+    /**
+     *
+     */
     private void findView() {
         //底部初始化
         for (int i = 0; i < bottomItem.num; i++) {
             bottomItem.linears[i] = (LinearLayout) findViewById(bottomItem.linear_id[i]);
             bottomItem.linears[i].setOnClickListener(this);
             bottomItem.images[i] = (ImageView) findViewById(bottomItem.image_id[i]);
-
             bottomItem.texts[i] = (TextView) findViewById(bottomItem.text_id[i]);
-            bottomItem.texts[i].setText(bottomItem.tabstr[i]);
         }
 
-        image_goback.setVisibility(View.VISIBLE);
-        image_gonext.setVisibility(View.VISIBLE);
-        title.setVisibility(View.VISIBLE);
-        title.setText(bottomItem.tabstr[0]);
     }
 
     @Override
