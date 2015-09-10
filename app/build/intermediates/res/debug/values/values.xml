@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/D:/AndroidStudio/PayDemo/app/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="nfd_wifipop_btn_bg_normal">#ff69aaed</color>
+    <color name="nfd_wifipop_btn_bg_pressed">#ff4d8fd2</color>
+    <color name="nfd_wifipop_btn_text_normal">#ffffffff</color>
+    <color name="nfd_wifipop_btn_text_pressed">#ffdadada</color>
+    <color name="transparent">#00000000</color>
+    <!-- From: file:/D:/AndroidStudio/PayDemo/app/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- From: file:/D:/AndroidStudio/PayDemo/app/src/main/res/values/integers.xml -->
+    <eat-comment/>
+    <integer name="sso_version_code">6</integer>
+    <!-- From: file:/D:/AndroidStudio/PayDemo/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="app_name">app_name</string>
+    <string name="contacts">联系人</string>
+    <string name="message">消息</string>
+    <string name="news">空间</string>
+    <string name="setting">设置</string>
+    <!-- From: file:/D:/AndroidStudio/PayDemo/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="AppBaseTheme" parent="@android:style/Theme.Light"/>
+    <style name="AppTheme" parent="@style/AppBaseTheme"/>
+    <style name="ThemeNoAnimation" parent="@style/AppTheme">
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+    <style name="bottom_bar_image">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+    <style name="bottom_bar_linear">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="bottom_bar_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#82858b</item>
+    </style>
+    <style name="notify_title">
+        <item name="android:textSize">13.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ffcccccc</item>
+    </style>
+</resources>
