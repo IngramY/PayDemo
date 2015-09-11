@@ -5,7 +5,7 @@
     <!--<string name="msp_app_name">支付宝快捷支付服务</string>-->
     <!--<string name="init">首次启动，正在优化，敬请期待！</string>-->
     <!--<string name="name">支付宝</string>-->
-    <string name="app_name">app_name</string>
+    <string name="app_name">Fragmentdemo</string>
     <!--<string name="account_label">淘宝</string>-->
     <!--<string name="label">支付宝钱包</string>-->
     <!--<string name="pref_about">关于</string>-->
@@ -41,4 +41,5 @@
     <string name="contacts">联系人</string>
     <string name="news">空间</string>
     <string name="setting">设置</string>
+    <string name="button">button</string>
 </resources>

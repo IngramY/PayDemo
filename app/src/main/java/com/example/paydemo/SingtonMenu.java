@@ -28,7 +28,8 @@ public class SingtonMenu {
     public int[] image_unselected = new int[]{R.drawable.message_unselected, R.drawable.contacts_unselected,
             R.drawable.news_unselected, R.drawable.setting_unselected};
 
-    public int[] tabstr = new int[]{R.string.message, R.string.contacts, R.string.news, R.string.setting};
+    public int[] text_str = new int[]{R.string.message, R.string.contacts, R.string.news, R.string.setting};
+    public int[] layout_id = new int[]{R.layout.fragment_message, R.layout.fragment_contacts, R.layout.fragment_news, R.layout.fragment_setting};
 
     public int[] linear_id = new int[]{R.id.tab1, R.id.tab2, R.id.tab3, R.id.tab4};
     public int[] image_id = new int[]{R.id.iv1, R.id.iv2, R.id.iv3, R.id.iv4};

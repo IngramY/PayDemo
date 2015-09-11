@@ -19,7 +19,8 @@
     <integer name="sso_version_code">6</integer>
     <!-- From: file:/D:/AndroidStudio/PayDemo/app/src/main/res/values/strings.xml -->
     <eat-comment/>
-    <string name="app_name">app_name</string>
+    <string name="app_name">Fragmentdemo</string>
+    <string name="button">button</string>
     <string name="contacts">联系人</string>
     <string name="message">消息</string>
     <string name="news">空间</string>
