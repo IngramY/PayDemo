@@ -1,6 +1,7 @@
 package com.example.paydemo;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -11,7 +12,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import butterknife.ButterKnife;
@@ -32,9 +35,16 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     FragmentManager fm;// 管理Fragment队列  事务的回退栈
     FragmentTransaction transaction; // 事务的回退栈
     BaseFragment baseFragment;
-    Bundle bundle;
+    Bundle bundle = new Bundle();
+
+    MessageFragment messageFragment;
+    ContactsFragment contactsFragment;
+    NewsFragment newsFragment;
+    SettingFragment settingFragment;
 
     Map<Integer, BaseFragment> fragmentMap = new HashMap<Integer, BaseFragment>();
+
+    List<Fragment> list = new ArrayList<Fragment>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,10 +54,10 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         ButterKnife.inject(this);
         bottomItem = SingtonMenu.getInstance();
         fm = getSupportFragmentManager();
+
         titleShow();
         findView();
         setTabselector(currentIndex);
-
     }
 
     /**
@@ -57,6 +67,16 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         image_goback.setVisibility(View.VISIBLE);
         image_gonext.setVisibility(View.VISIBLE);
         title.setVisibility(View.VISIBLE);
+
+        messageFragment = new MessageFragment();
+        contactsFragment = new ContactsFragment();
+        newsFragment = new NewsFragment();
+        settingFragment = new SettingFragment();
+
+        list.add(messageFragment);
+        list.add(contactsFragment);
+        list.add(newsFragment);
+        list.add(settingFragment);
     }
 
     /**
@@ -67,25 +87,32 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         bottomItem.images[index].setImageResource(bottomItem.image_selected[index]);
         bottomItem.texts[index].setTextColor(getResColorbyId(R.color.white));
         title.setText(bottomItem.text_str[index]);
-
         transaction = fm.beginTransaction();
+
         hideFragments(transaction);
 
-        if (fragmentMap.get(index) == null){
-            baseFragment = new BaseFragment();
-            bundle.putInt("layout_id", bottomItem.layout_id[index]);
+//        if (fragmentMap.get(index) == null) {
+//            baseFragment = new BaseFragment();
+//            bundle.putInt("layout_id", bottomItem.layout_id[index]);
+//            fragmentMap.put(index, baseFragment);
+//            fragmentMap.get(index).setArguments(bundle);
+//            transaction.add(R.id.content, fragmentMap.get(index));
+//        } else {
+//            transaction.show(fragmentMap.get(index));
+//        }
 
-            fragmentMap.get(index).setArguments(bundle);
 
-            transaction.add(R.id.content, fragmentMap.get(index));
-        } else {
-            transaction.show(fragmentMap.get(index));
+        if (!list.get(index).isAdded()) {
+
+            transaction.add(R.id.content, list.get(index));
         }
+            transaction.show(list.get(index));
+
         transaction.commit();
     }
 
     /**
-     * 清除 选中 状态
+     * 清除 tab的 选中 状态
      */
     private void clearTabselector() {
         for (int i = 0; i < bottomItem.num; i++) {
@@ -115,7 +142,6 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     public void onClick(View view) {
         for (int i = 0; i < bottomItem.num; i++) {
             if (view.getId() == bottomItem.linear_id[i]) {
-
                 //点击的Linear背景设置为selector状态
                 setTabselector(i);
                 currentIndex = i;
@@ -128,9 +154,21 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
      *            隐藏所有非空fragment
      */
     private void hideFragments(FragmentTransaction transaction) {
-        for (int i = 0; i < bottomItem.num; i++){
-            transaction.hide(fragmentMap.get(i));
+        for (int i = 0; i < list.size(); i++){
+            if (list.get(i) != null) {
+                transaction.hide(list.get(i));
+            }
         }
     }
-
+//    /**
+//     * @param transaction
+//     *            隐藏所有非空fragment
+//     */
+//    private void hideFragments(FragmentTransaction transaction) {
+//        for (int i = 0; i < fragmentMap.size(); i++){
+//            if (fragmentMap.get(i) != null) {
+//                transaction.hide(fragmentMap.get(i));
+//            }
+//        }
+//    }
 }
