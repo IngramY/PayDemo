@@ -13,7 +13,7 @@
         <ImageView
             android:id="@+id/iv1"
             style="@style/bottom_bar_image"
-            android:src="@drawable/message_selected"/>
+            android:background="@drawable/message_unselected"/>
 
         <TextView
             android:id="@+id/text1"
@@ -28,7 +28,7 @@
         <ImageView
             android:id="@+id/iv2"
             style="@style/bottom_bar_image"
-            android:src="@drawable/contacts_unselected"/>
+            android:background="@drawable/contacts_unselected"/>
 
         <TextView
             android:id="@+id/text2"
@@ -44,7 +44,7 @@
         <ImageView
             android:id="@+id/iv3"
             style="@style/bottom_bar_image"
-            android:src="@drawable/news_unselected"/>
+            android:background="@drawable/news_unselected"/>
 
         <TextView
             android:id="@+id/text3"
@@ -60,7 +60,7 @@
         <ImageView
             android:id="@+id/iv4"
             style="@style/bottom_bar_image"
-            android:src="@drawable/setting_unselected"/>
+            android:background="@drawable/setting_unselected"/>
 
         <TextView
             android:id="@+id/text4"

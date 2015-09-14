@@ -1,5 +1,6 @@
 package com.example.paydemo;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -82,6 +83,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     /**
      * @param index tab 位置
      */
+    @SuppressLint("CommitTransaction")
     private void setTabselector(int index) {
         clearTabselector();
         bottomItem.images[index].setImageResource(bottomItem.image_selected[index]);
@@ -101,13 +103,10 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 //            transaction.show(fragmentMap.get(index));
 //        }
 
-
         if (!list.get(index).isAdded()) {
-
             transaction.add(R.id.content, list.get(index));
         }
             transaction.show(list.get(index));
-
         transaction.commit();
     }
 
@@ -160,6 +159,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
             }
         }
     }
+
 //    /**
 //     * @param transaction
 //     *            隐藏所有非空fragment
@@ -171,4 +171,5 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 //            }
 //        }
 //    }
+
 }

@@ -42,4 +42,8 @@
     <string name="news">空间</string>
     <string name="setting">设置</string>
     <string name="button">button</string>
+    <string name="title_activity_view_page">ViewPageActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
 </resources>

@@ -13,16 +13,21 @@
         <!--<item name="android:windowBackground">@android:color/transparent</item>-->
         <!--<item name="android:windowNoTitle">true</item>-->
     <!--</style>-->
+
     <style name="AppBaseTheme" parent="@android:style/Theme.Light" />
+
     <style name="ThemeNoAnimation" parent="@style/AppTheme">
         <item name="android:windowAnimationStyle">@null</item>
     </style>
+
     <style name="AppTheme" parent="@style/AppBaseTheme" />
+
     <style name="notify_title">
         <item name="android:textSize">13.0sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">#ffcccccc</item>
     </style>
+
     <!--<style name="notify_progress">-->
         <!--<item name="android:textSize">13.0sp</item>-->
         <!--<item name="android:textStyle">normal</item>-->
