@@ -26,15 +26,19 @@
         <activity
             android:name="com.example.paydemo.MainActivity"
             android:label="@string/app_name" >
-        </activity>
-        <activity
-            android:name="com.example.paydemo.viewfragment.ViewPageActivity"
-            android:label="@string/title_activity_view_page" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.paydemo.viewfragment.ViewPageActivity"
+            android:label="@string/title_activity_view_page" >
+        </activity>
+        <activity
+            android:name="com.example.paydemo.basefragment.FragmentActivity"
+            android:label="@string/title_activity_fragment" >
         </activity>
     </application>
 

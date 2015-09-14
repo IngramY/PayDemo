@@ -6,16 +6,18 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <include layout="@layout/top_bar"/>
-
-    <FrameLayout
-        android:id="@+id/content"
+    <Button
+        android:id="@+id/fragment"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_height="wrap_content"
+        android:text="@string/title_activity_fragment"/>
 
+    <Button
+        android:id="@+id/viewpage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_activity_view_page"/>
 
-    <include layout="@layout/bottom"/>
 
 </LinearLayout>
 <!-- From: file:/D:/AndroidStudio/PayDemo/app/src/main/res/layout/activity_main.xml -->

@@ -1,10 +1,12 @@
-package com.example.paydemo;
+package com.example.paydemo.fragmentview;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.paydemo.R;
 
 public class NewsFragment extends Fragment {
 

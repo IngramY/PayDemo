@@ -1,4 +1,4 @@
-package com.example.paydemo;
+package com.example.paydemo.fragmentview;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

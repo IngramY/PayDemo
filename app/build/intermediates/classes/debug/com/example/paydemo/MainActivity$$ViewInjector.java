@@ -7,17 +7,30 @@ import butterknife.ButterKnife.Finder;
 public class MainActivity$$ViewInjector {
   public static void inject(Finder finder, final com.example.paydemo.MainActivity target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131361808, "field 'image_goback'");
-    target.image_goback = (android.widget.ImageButton) view;
-    view = finder.findRequiredView(source, 2131361811, "field 'title'");
-    target.title = (android.widget.TextView) view;
-    view = finder.findRequiredView(source, 2131361815, "field 'image_gonext'");
-    target.image_gonext = (android.widget.ImageButton) view;
+    view = finder.findRequiredView(source, 2131361793, "field 'fragment' and method 'submit'");
+    target.fragment = (android.widget.Button) view;
+    view.setOnClickListener(
+      new android.view.View.OnClickListener() {
+        @Override public void onClick(
+          android.view.View p0
+        ) {
+          target.submit();
+        }
+      });
+    view = finder.findRequiredView(source, 2131361794, "field 'viewpage' and method 'button_fragment'");
+    target.viewpage = (android.widget.Button) view;
+    view.setOnClickListener(
+      new android.view.View.OnClickListener() {
+        @Override public void onClick(
+          android.view.View p0
+        ) {
+          target.button_fragment();
+        }
+      });
   }
 
   public static void reset(com.example.paydemo.MainActivity target) {
-    target.image_goback = null;
-    target.title = null;
-    target.image_gonext = null;
+    target.fragment = null;
+    target.viewpage = null;
   }
 }

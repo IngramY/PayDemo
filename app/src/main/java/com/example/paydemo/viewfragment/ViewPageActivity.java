@@ -9,11 +9,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.paydemo.ContactsFragment;
-import com.example.paydemo.MessageFragment;
-import com.example.paydemo.NewsFragment;
+import com.example.paydemo.fragmentview.ContactsFragment;
+import com.example.paydemo.fragmentview.MessageFragment;
+import com.example.paydemo.fragmentview.NewsFragment;
 import com.example.paydemo.R;
-import com.example.paydemo.SettingFragment;
+import com.example.paydemo.fragmentview.SettingFragment;
 import com.example.paydemo.SingtonMenu;
 
 import java.util.ArrayList;

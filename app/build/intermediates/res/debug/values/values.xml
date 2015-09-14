@@ -27,6 +27,7 @@
     <string name="message">消息</string>
     <string name="news">空间</string>
     <string name="setting">设置</string>
+    <string name="title_activity_fragment">FragmentActivity</string>
     <string name="title_activity_view_page">ViewPageActivity</string>
     <!-- From: file:/D:/AndroidStudio/PayDemo/app/src/main/res/values/styles.xml -->
     <eat-comment/>
