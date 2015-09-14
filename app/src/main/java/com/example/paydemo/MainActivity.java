@@ -13,6 +13,9 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
 
+/**
+ * fragment 使用  fragment 与viewpage 使用
+ */
 public class MainActivity extends Activity {
 
     @InjectView(R.id.fragment)
